@@ -1,0 +1,22 @@
+#PS10P1
+#Alexander
+#3-4-26
+
+#fuction for the discounts
+def Get_Dsct(ItmQty,ItmPri,DsctRte):
+    TotPri = ItmQty*ItmPri
+    DsctAmnt = TotPri*(DsctRte/100)
+    DsctPri = TotPri - DsctAmnt
+    return DsctAmnt, DsctPri
+
+#inputs
+ItmQty = float(input("Enter Item Quantity: "))
+ItmPri = float(input("Enter Item Price: "))
+DsctRte = float(input("Enter Discount Price: "))
+
+#Process
+DsctAmnt,DsctPri = Get_Dsct(ItmQty,ItmPri,DsctRte)
+#Outputs
+print("Total Price: ",ItmQty*ItmPri)
+print("Discount Amount: ",DsctAmnt)
+print("Discounted Price: ",DsctPri)
