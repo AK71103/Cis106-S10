@@ -1,0 +1,25 @@
+#PS10P4
+#Alexander Kazantzis
+#3-4-26
+
+#Function for Average game score
+def Comp_AvgSCr(GmScr1,GmScr2,GmScr3):
+    TotPnts= GmScr1+GmScr2+GmScr3
+    AvgScr= TotPnts/3
+    HndCapPrcnt = (HndCap/100)
+    AvgScrHndCap = (TotPnts-AvgScr)
+    return AvgScr,AvgScrHndCap
+
+#Input
+LstNme = input("Enter Player's Last Name: ")
+GmScr1 = float(input("Enter first Game score: "))
+GmScr2 = float(input("Enter second Game score: "))
+GmScr3 = float(input("Enter third Game score: "))
+HndCap =  float(input("Enter Handicap: "))
+#Process
+AvgScr,AvgScrHndCap = Comp_AvgSCr(GmScr1,GmScr2,GmScr3)
+#Output
+
+print("Player's Last Name: ",LstNme)
+print("Average Score: ",f"{AvgScr: .2f}")
+print("Average score with Handicap: ",f"{AvgScrHndCap: .2f}")
