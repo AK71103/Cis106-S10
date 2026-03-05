@@ -1,0 +1,22 @@
+#PS10P2
+#Alexander Kazantzis
+#3-4-26
+
+#Function for Average score
+def Get_Avg(ExmScr1,ExmScr2,ExmScr3):
+    TotPnts = ExmScr1+ExmScr2+ExmScr3
+    AvgScr = TotPnts/3
+    return TotPnts,AvgScr
+
+#Input
+LstNme = input("Enter Student's Last Name: ")
+ExmScr1 = float(input("Enter first exam score: "))
+ExmScr2 = float(input("Enter second exam score: "))
+ExmScr3 = float(input("Enter third exam score: "))
+#Process
+TotPnts, AvgScr = Get_Avg(ExmScr1,ExmScr2,ExmScr3)
+#Output
+
+print("Student's Last Name: ",LstNme)
+print("Total Points: ",TotPnts)
+print("Average Score: ",AvgScr)
