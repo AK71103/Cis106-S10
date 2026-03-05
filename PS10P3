@@ -1,0 +1,23 @@
+#PS10P3
+#Alexander Kazantzis
+#3-4-26
+
+#Function for Average Commission and Next Year's Target
+def Get_Commin(CrntSales):
+    if CrntSales>100000:
+        Commin = CrntSales*(10/100)
+    elif CrntSales<=100000:
+        Commin = CrntSales*(5/100)
+    NxtYrTrgt = CrntSales*(5/100)
+    return Commin,NxtYrTrgt
+
+#Input
+LstNme = input("Enter SalesPerson's Last Name: ")
+CrntSales = float(input("Enter EnterSales: "))
+#Process
+Commin, NxtYrTrgt = Get_Commin(CrntSales)
+#Output
+
+print("SalesPerson's Last Name: ",LstNme)
+print("Commission: ",Commin)
+print("Next Year's Target: ",NxtYrTrgt)
