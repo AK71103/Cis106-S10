@@ -1,0 +1,41 @@
+#PS10P5
+#Alexander Kazantzis
+#3-4-26
+
+# Global variables
+TotPri = 0.0
+ItmTax = 0.0
+
+def Comp_ToTPri_and_ItmTax(ItmQty,ItmPri):
+    """
+    Computes the total and tax for the given quantity and unit price.
+    Updates the global variables total and tax.
+    """
+    global TotPri, ItmTax  # Declare that we are modifying the global variables
+    
+    TotPri = ItmQty * ItmPri
+    ItmTax = TotPri * 0.07  # 7% sales tax
+
+def main():
+    try:
+        # Get user input
+        ItmQty = int(input("Enter Item Quantity: "))
+        ItmPri = float(input("Enter Item Price: "))
+
+        if ItmQty < 0 or ItmPri < 0:
+            print("Quantity and unit price must be non-negative.")
+            return
+
+        # Compute total and tax
+        Comp_ToTPri_and_ItmTax(ItmQty,ItmPri)
+
+        # Display results
+        print(f"Total (before tax): ${TotPri:.2f}")
+        print(f"Tax (7%): ${ItmTax:.2f}")
+        print(f"Grand Total: ${TotPri + ItmTax:.2f}")
+
+    except ValueError:
+        print("Invalid input. Please enter numeric values.")
+
+if __name__ == "__main__":
+    main()
